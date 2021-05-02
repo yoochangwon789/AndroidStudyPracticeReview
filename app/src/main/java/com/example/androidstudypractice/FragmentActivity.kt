@@ -12,13 +12,27 @@ class FragmentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fragment)
         Log.d("life_cycle", "onCreate")
 
+        val fragmentOne: FragmentOne = FragmentOne()
+        val bundle: Bundle = Bundle()
+
+        bundle.putString("hello", "hello")
+        fragmentOne.arguments = bundle
+
         button.setOnClickListener {
-            val fragmentOne: FragmentOne = FragmentOne()
             val fragmentManager: FragmentManager = supportFragmentManager
 
             val fragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.container_view, fragmentOne)
             fragmentTransaction.commit()
+        }
+
+        button2.setOnClickListener {
+            val fragmentManager: FragmentManager = supportFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+
+            fragmentTransaction.detach(fragmentOne)
+            fragmentTransaction.commit()
+
         }
     }
 

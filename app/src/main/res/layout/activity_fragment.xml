@@ -13,18 +13,24 @@
         android:text="안녕하세요"
         android:textSize="50dp"/>
 
-    <fragment
-        android:id="@+id/fragment_one"
-        android:name="com.example.androidstudypractice.FragmentOne"
-        android:layout_width="match_parent"
-        android:layout_height="300dp">
-    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/fragment_one"-->
+<!--        android:name="com.example.androidstudypractice.FragmentOne"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp">-->
+<!--    </fragment>-->
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="나와라!"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사라져!"/>
 
     <LinearLayout
         android:id="@+id/container_view"
