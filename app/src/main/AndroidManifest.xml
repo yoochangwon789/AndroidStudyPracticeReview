@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudyPractice">
-        <activity android:name=".PhoneBookSelect"></activity>
-        <activity android:name=".PhoneBookActivity">
+        <activity android:name=".ListViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddView"></activity>
+        <activity android:name=".PhoneBookSelect" />
+        <activity android:name=".PhoneBookActivity">
+
+        </activity>
+        <activity android:name=".AddView" />
         <activity android:name=".FragmentActivity" />
         <activity android:name=".Intent2" />
         <activity android:name=".Intent1" />
