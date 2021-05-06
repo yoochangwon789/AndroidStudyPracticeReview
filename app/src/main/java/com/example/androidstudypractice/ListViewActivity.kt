@@ -57,14 +57,44 @@ class ListViewAdapter(val carForList: ArrayList<CarForList>, val layoutInflater:
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view = layoutInflater.inflate(R.layout.item_view, null)
+//        val view = layoutInflater.inflate(R.layout.item_view, null)
+//
+//        val carName = view.findViewById<TextView>(R.id.car_name)
+//        val carEngine = view.findViewById<TextView>(R.id.car_engine)
+//
+//        carName.setText(carForList.get(position).name)
+//        carEngine.setText(carForList.get(position).engine)
+//
+//        return view
 
-        val carName = view.findViewById<TextView>(R.id.car_name)
-        val carEngine = view.findViewById<TextView>(R.id.car_engine)
+        val holder: ViewHolder
+        val view: View
 
-        carName.setText(carForList.get(position).name)
-        carEngine.setText(carForList.get(position).engine)
+        if (convertView == null) {
+            view = layoutInflater.inflate(R.layout.item_view, null)
+            holder = ViewHolder(view)
+
+            view.tag = holder
+
+            return view
+        } else {
+            holder = convertView.tag as ViewHolder
+            view = convertView
+        }
+
+        holder.carName?.setText(carForList.get(position).name)
+        holder.carEngine?.setText(carForList.get(position).engine)
 
         return view
+    }
+}
+
+class ViewHolder(val contextView: View) {
+    var carName: TextView? = null
+    var carEngine: TextView? = null
+
+    init {
+        carName = contextView.findViewById(R.id.car_name)
+        carEngine = contextView.findViewById(R.id.car_engine)
     }
 }
