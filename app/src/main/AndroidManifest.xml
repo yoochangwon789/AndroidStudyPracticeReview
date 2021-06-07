@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudyPractice">
-        <activity android:name=".TabLayoutPagerActivity">
+        <activity android:name=".RecTest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TabLayoutPagerActivity"></activity>
         <activity android:name=".RecyclerViewBook">
 
         </activity>
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" />
         <activity android:name=".PhoneBookSelect" />
         <activity android:name=".PhoneBookActivity" />
         <activity android:name=".AddView" />
